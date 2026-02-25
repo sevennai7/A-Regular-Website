@@ -9,7 +9,7 @@ h1 {
 
 @font-face {
   font-family: comic;
-  src: url(fonts/COMIC.TTF);
+  src: url(COMIC.TTF);
 }
 
 .flash {
