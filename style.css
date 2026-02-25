@@ -55,3 +55,8 @@ body {
   65% { color: green; text-shadow: 0 0 5px green; }
 
 }
+
+.flash:hover {
+  animation-play-state: paused !important;
+  cursor: help;
+}
