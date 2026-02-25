@@ -1,15 +1,16 @@
+@font-face {
+  font-family: comic;
+  src: url(fonts/COMIC.TTF);
+}
+
 body {
   background-color: crimson;
 }
 
 h1 {
   color: white;
+  font-family: comic
   text-align: center;
-}
-
-@font-face {
-  font-family: comic;
-  src: url(COMIC.TTF);
 }
 
 .flash {
