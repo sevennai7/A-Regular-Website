@@ -7,74 +7,11 @@
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 <link rel="stylesheet" href="style.css">
+<nav class="top-nav">
+  <a href="settings.html" class="settings-btn">
+    <ion-icon name="settings-outline"></ion-icon>
+  </a>
+</nav>
 <h1>Welcome to the Website</h1>
 <p class="flash">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque non nisi rhoncus, blandit dui at, volutpat justo. Quisque quis enim in ex placerat sollicitudin. Proin maximus, ex vitae efficitur placerat, enim magna maximus neque, sed ultricies turpis sem in neque. Nulla gravida at tortor et condimentum. Cras tincidunt dictum mauris, a placerat dolor varius et. Vivamus et feugiat velit, non euismod augue. Duis ullamcorper neque libero, a blandit sapien finibus sed. Aliquam vitae eleifend diam. Etiam elementum enim a blandit tempus. Donec vitae arcu odio. Sed sagittis metus ut ex laoreet auctor. Morbi porta eros vel felis malesuada, sit amet porttitor urna posuere. Fusce pellentesque in magna nec euismod. Sed et semper est, non tincidunt nibh. Vestibulum turpis mauris, viverra ut bibendum scelerisque, sodales nec augue. Maecenas nec odio eget orci aliquam placerat.</p>
-
-</head> 
-<body>
-  <div class="menu">
-
-	<div class="menu-header">
-		<h2 class="menu-header-title">Theme</h2>
-		<div class="theme-switcher">
-			<input type="radio" id="light-theme" name="themes" checked />
-			<label for="light-theme">
-				<span>
-					<ion-icon name="sunny"></ion-icon> Light theme
-				</span>
-			</label>
-			<input type="radio" id="dark-theme" name="themes" />
-			<label for="dark-theme">
-				<span>
-					<ion-icon name="moon"></ion-icon> Dark theme
-				</span>
-			</label>
-			<input type="radio" id="black-theme" name="themes" />
-			<label for="black-theme">
-				<span>
-					<ion-icon name="contrast"></ion-icon> Black
-				</span>
-			</label>
-			<span class="slider"></span>
-		</div>
-	</div>
-	<div class="menu-body">
-		<a href="#"><ion-icon name="settings-outline"></ion-icon>Account Settings</a>
-		<a href="#"><ion-icon name="chatbox-ellipses-outline"></ion-icon>Give Feedback</a>
-		<a href="#"><ion-icon name="information-circle-outline"></ion-icon>About</a>
-		<a href="#"><ion-icon name="mail-outline"></ion-icon>Support</a>
-	</div>
-
-</div>
-<script>
-  const html = document.documentElement;
-  const radios = document.getElementsByName('themes');
-
-  // --- LOAD SAVED SETTINGS ---
-  const savedSettings = JSON.parse(localStorage.getItem('myWebSettings'));
-  if (savedSettings && savedSettings.theme) {
-    html.classList.add(savedSettings.theme);
-    // This part checks the correct radio button visually
-    document.getElementById(savedSettings.theme).checked = true;
-  }
-
-  // --- THEME SWITCHER LOGIC ---
-  for (let i = 0; i < radios.length; i++) {
-    radios[i].addEventListener('change', function() {
-      // 1. Remove all possible theme classes
-      html.classList.remove('light-theme', 'dark-theme', 'black-theme');
-      
-      // 2. Add the selected one
-      html.classList.add(this.id);
-      
-      // 3. Save to "JSON" memory
-      const currentSettings = {
-        theme: this.id,
-        photoSensitive: false 
-      };
-      localStorage.setItem('myWebSettings', JSON.stringify(currentSettings));
-    }); // <-- Fixed missing closing )
-  } // <-- Fixed missing closing }
-</script>
-</body>
-  </html>
+</html>
