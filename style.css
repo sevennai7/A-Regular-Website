@@ -9,13 +9,13 @@ body {
 
 h1 {
   color: white;
-  font-family: comic
+  font-family: comic;
   text-align: center;
 }
 
 .flash {
   font-weight: bold;
-  font-family: comic
+  font-family: comic;
   font-size: 24px;
   text-align: center;
   display: inline-block !important;
