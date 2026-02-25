@@ -47,24 +47,34 @@
 
 </div>
 <script>
-  var html = document.documentElement; // Shorthand for <html>
-var radios = document.getElementsByName('themes'); 
+  const html = document.documentElement;
+  const radios = document.getElementsByName('themes');
 
-for (let i = 0; i < radios.length; i++) {
-  radios[i].addEventListener('change', function() {
-    // 1. Remove old themes
-    html.classList.remove('light-theme', 'dark-theme', 'black-theme');
-    
-    // 2. Add the new one
-    html.classList.add(this.id);
-    
-    // 3. Update our "JSON" memory
-    const currentSettings = {
-      theme: this.id,
-      photoSensitive: false // You can toggle this later!
-    };
-    localStorage.setItem('myWebSettings', JSON.stringify(currentSettings));
-  });
+  // --- LOAD SAVED SETTINGS ---
+  const savedSettings = JSON.parse(localStorage.getItem('myWebSettings'));
+  if (savedSettings && savedSettings.theme) {
+    html.classList.add(savedSettings.theme);
+    // This part checks the correct radio button visually
+    document.getElementById(savedSettings.theme).checked = true;
+  }
+
+  // --- THEME SWITCHER LOGIC ---
+  for (let i = 0; i < radios.length; i++) {
+    radios[i].addEventListener('change', function() {
+      // 1. Remove all possible theme classes
+      html.classList.remove('light-theme', 'dark-theme', 'black-theme');
+      
+      // 2. Add the selected one
+      html.classList.add(this.id);
+      
+      // 3. Save to "JSON" memory
+      const currentSettings = {
+        theme: this.id,
+        photoSensitive: false 
+      };
+      localStorage.setItem('myWebSettings', JSON.stringify(currentSettings));
+    }); // <-- Fixed missing closing )
+  } // <-- Fixed missing closing }
 </script>
 </body>
   </html>
