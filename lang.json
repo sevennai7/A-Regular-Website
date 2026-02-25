@@ -1,0 +1,23 @@
+{
+  "en": {
+    "title": "Welcome to my Website",
+    "light": "Light mode"
+    "dark": "Dark mode"
+    "lang": "Language"
+    "seizure_mode": "Photo-sensitive mode"
+  },
+  "de-DE": {
+    "title": "Willkommen zu meinem Seite",
+    "light": "Lichtmodus"
+    "dark": "Dunkel-Modus"
+    "lang": "Sprache"
+    "seizure_mode": "lichtempfindlicher Modus"
+  },
+  "tlh": {
+    "title": "Welcome to my Website",
+    "light": "pem lo'"
+    "dark": "ram lo'"
+    "lang": "Hol"
+    "seizure_mode": "jerghmoH lo'"
+  }
+}
