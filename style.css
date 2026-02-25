@@ -7,8 +7,14 @@ h1 {
   text-align: center;
 }
 
+@font-face {
+  font-family: comic;
+  src: url(fonts/COMIC.TTF);
+}
+
 .flash {
   font-weight: bold;
+  font-family: comic
   font-size: 24px;
   text-align: center;
   display: inline-block !important;
@@ -16,9 +22,20 @@ h1 {
 }
 
 @keyframes color-change {
-  0% { color: red; }
-  35% { color: blue; }
-  65% { color: green; }
-  100% { color: red; }
-
+  0% { 
+    color: red; 
+    text-shadow: 0 0 5px red; 
+  }
+  35% { 
+    color: blue; 
+    text-shadow: 0 0 5px blue; 
+  }
+  65% { 
+    color: green; 
+    text-shadow: 0 0 5px green; 
+  }
+  100% { 
+    color: red; 
+    text-shadow: 0 0 5px red; 
+  }
 }
